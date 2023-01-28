@@ -2,7 +2,6 @@ module JuliaLibTest
 
 include("Utils.jl")
 
-sayhi("John")
-export sayhi
+export sayhi, greetme, greetmeinspanish
 
 end

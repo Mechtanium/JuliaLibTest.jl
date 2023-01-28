@@ -1,6 +1,2 @@
-using JuliaLibTest
-using Test
-
-@testset "JuliaLibTest.jl" begin
-    @test sayhi("John") == "Dear John, I'm Julia and I'd like to say hi!"
-end
+using SafeTestsets
+@safeTestset "Safe Test 1" begin include("testsafe1.jl") end
