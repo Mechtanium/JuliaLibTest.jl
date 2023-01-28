@@ -1,5 +1,8 @@
 module JuliaLibTest
 
-# Write your package code here.
+include("Utils.jl")
+
+sayhi("John")
+export sayhi
 
 end
