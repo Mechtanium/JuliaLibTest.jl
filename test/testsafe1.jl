@@ -13,7 +13,7 @@ using Test
     x = ones(10)
     b = Ci*x
     Ci += N
-
+    
     @test normal_reg(Ci, b)[1] ≈ my_reg(Ci, b)[1]
 end
 
