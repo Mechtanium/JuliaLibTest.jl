@@ -14,8 +14,6 @@ using Test
     b = Ci*x
     Ci += N
 
-    using BenchmarkTools
-
     @test normal_reg(Ci, b)[1] ≈ my_reg(Ci, b)[1]
 end
 
