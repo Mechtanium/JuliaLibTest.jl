@@ -1,8 +1,25 @@
 using JuliaLibTest
 using Test
 
+@testset "Regression test" begin
+    A = rand(50, 50)
+    B = rand(50, 10)
+    N = rand([0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9], 50, 10)
+
+    C = A*B
+
+    using SparseArrays
+    Ci = sparse(C)
+    x = ones(10)
+    b = Ci*x
+    Ci += N
+
+    using BenchmarkTools
+
+    @test normal_reg(Ci, b) ≈ my_reg(Ci, b)
+end
+
 @testset "Trial test 1" begin
-    @test sayhi("John") == "Dear John, I'm Julia and I'd like to say hi!"
     @test sayhi("John") == "Dear John, I'm Julia and I'd like to say hi!"
 end
 
