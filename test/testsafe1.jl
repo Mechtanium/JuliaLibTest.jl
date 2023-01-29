@@ -16,7 +16,7 @@ using Test
 
     using BenchmarkTools
 
-    @test normal_reg(Ci, b) ≈ my_reg(Ci, b)
+    @test normal_reg(Ci, b)[1] ≈ my_reg(Ci, b)[1]
 end
 
 @testset "Trial test 1" begin
