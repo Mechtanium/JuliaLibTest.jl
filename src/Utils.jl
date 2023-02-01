@@ -7,3 +7,5 @@ greetmeinspanish = nombre -> "Hola senor $nombre. Como estas. Me llamo Julia y t
 normal_reg = (A, b) -> A\b
 
 my_reg = (A, b) -> (transpose(A)*A)\(transpose(A)*b)
+
+function (\)(A::AbstractMatrix, )
